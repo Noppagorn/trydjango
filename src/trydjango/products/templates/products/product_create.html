@@ -1,8 +1,31 @@
 {% extends 'base.html' %}
+
+
+
 {% block contant %}
 <!--serach-->
+
 <form action='.' method='POST'>{% csrf_token %}
+    {% load static %}
+    <head>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/product.css' %}">
+    </head>
+
+    <h1><a href="/">Manage TR Class</a></h1>
+    <!--<h1>Create Object</h1>-->
+    <!--{{ form.as_ul }}-->
+    <div id="outer">
+        <div class="inner" style="float:left" >{{ form.title }}</div>
+        <input type="submit" value="search" />
+    </div>
+    <h1>Data</h1>
+    <p class="from">
     {{ form.as_ul }}
+    </p>
     <!--<input type="text" name="title" placeholder="Your title"/>-->
     <!--<input type="text" name="topic" placeholder="Topic"/>-->
     <input type='submit' value="Save"/>

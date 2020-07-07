@@ -26,8 +26,8 @@ urlpatterns = [
     #path('create/',product_create_view)
     path('create/',render_initail_data),
     #path('products/<int:my_id>/',dynamic_lookup_view,name='products')
-    #path('products/',product_list_view,name='product-list')
+    path('products/',product_list_view,name='product-list'),
     #path('products/<str:>/',dynamic_lookup_view,) # cant usr another type
-    path('products/<int:my_id>/',dynamic_lookup_view,name='product')
+    path('products/<int:my_id>/',dynamic_lookup_view,name='product-detail')
     #path('products/<INT:ID>/delete',dynamic_delete_view,name='products')
 ]

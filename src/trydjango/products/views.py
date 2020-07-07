@@ -27,7 +27,7 @@ def render_initail_data(request):
 
     #obj = Product.objects.get(id=1)
     obj = Product.objects.get(id=1)
-    print(obj)
+    #print(obj)
     initial_data = {
         'title' : obj.title,
         'description' : obj.description

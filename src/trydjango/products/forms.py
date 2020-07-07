@@ -22,6 +22,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = [
+
             'title',
             'description',
             'price'
@@ -42,6 +43,7 @@ class ProductForm(forms.ModelForm):
         return email
 
 class RawProductForm(forms.ModelForm):
+    search = forms.CharField(label="")
     title = forms.CharField(label="",widget=forms.TextInput(
         attrs={
             "placeholder": "Your title"
@@ -60,6 +62,7 @@ class RawProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = [
+            'search',
             'title',
             'description',
             'price'

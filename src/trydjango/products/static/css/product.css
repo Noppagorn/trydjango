@@ -1,0 +1,13 @@
+h1 a {
+    color: red;
+}
+div.inner {
+  margin: 10px;
+}
+input {
+    margin:10px;
+}
+p.from {
+    margin: 40px;
+    margin-top: 25px;
+}
