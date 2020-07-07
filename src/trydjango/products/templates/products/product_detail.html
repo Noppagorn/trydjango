@@ -1,18 +1,7 @@
+
 {% extends 'base.html' %}
 {% block contant %}
-<h1>In App Templates {{ object.title }}</h1>
-<p>{% if object.description != None and object.description != '' %}
-    {{ object.description }}
-    {% else %}
-    Comming Soon
-    {% endif %}
-</p>
-{{ object.price }}
+<h1>{{ object.title }}</h1>
+<p>{{ object.description }}</p>
+<p>{{ object.price }}</p>
 {% endblock %}
-
-<!--{% extends 'base.html' %}-->
-<!--{% block contant %}-->
-<!--<h1>{{ object.title }}</h1>-->
-<!--<p>{{ object.description }}</p>-->
-<!--<p>{{ object.price }}</p>-->
-<!--{% endblock %}-->
